@@ -1,5 +1,6 @@
 let questions = [
     { "japanese": "とにかく", "english": "anyway", "partOfSpeech": "副詞" },
+     { "japanese": "耳鼻咽喉科(19文字）", "english": "otorhinolaryngology", "partOfSpeech": "副詞" },
     { "japanese": "美しい", "english": "beautiful", "partOfSpeech": "形容詞" },
     { "japanese": "走る", "english": "run", "partOfSpeech": "動詞" },
     { "japanese": "犬", "english": "dog", "partOfSpeech": "名詞" },
