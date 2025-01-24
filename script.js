@@ -257,12 +257,15 @@ let questions = [
       { "japanese": "寄付する，貢献する", "english": "contribute", "partOfSpeech": "動詞" },
 ];
 
+
 let score = 0;
 let lives = 3;
 let timeLeft = 90;
 let currentQuestionIndex = 0;
 let timer;
 let selectedQuestions = [];
+let wrongAnswers = [];
+let correctAnswers = [];
 
 // HTML要素取得
 const homeScreen = document.getElementById("home-screen");
@@ -284,6 +287,10 @@ const livesElement = document.getElementById("lives");
 const timerElement = document.getElementById("timer");
 const questionPlaceholder = document.getElementById("question-placeholder");
 const correctAnswerElement = document.getElementById("correct-answer");
+const reviewWrongAnswers = document.getElementById("review-wrong-answers");
+const reviewCorrectAnswers = document.getElementById("review-correct-answers");
+const reviewWrongAnswersClear = document.getElementById("review-wrong-answers-clear");
+const reviewCorrectAnswersClear = document.getElementById("review-correct-answers-clear");
 
 // ホーム画面からゲーム画面へ
 gamePlayButton.addEventListener("click", () => {
@@ -310,6 +317,8 @@ function startGame() {
     lives = 3;
     timeLeft = 90;
     currentQuestionIndex = 0;
+    wrongAnswers = [];
+    correctAnswers = [];
     selectedQuestions = getRandomQuestions();
     updateUI();
     showQuestion();
@@ -321,6 +330,11 @@ function startGame() {
     hintButton.style.display = "block";
     hintElement.style.display = "none";
     correctAnswerElement.style.display = "none";
+    reviewWrongAnswers.innerHTML = "";
+    reviewCorrectAnswers.innerHTML = "";
+    reviewWrongAnswersClear.innerHTML = "";
+    reviewCorrectAnswersClear.innerHTML = "";
+    document.body.style.backgroundColor = "#f4f4f9"; // 背景色の初期化
 }
 
 function resetGame() {
@@ -337,6 +351,7 @@ function resetGame() {
     hintElement.style.display = "none";
     correctAnswerElement.style.display = "none";
     updateUI();
+    document.body.style.backgroundColor = "#f4f4f9"; // 背景色の初期化
 }
 
 function getRandomQuestions() {
@@ -355,6 +370,9 @@ function showQuestion() {
     partOfSpeechElement.textContent = question.partOfSpeech;
     inputElement.value = '';
     hintElement.style.display = "none";
+
+    // 選択肢要素の初期化
+    document.body.style.backgroundColor = "#f4f4f9"; // 背景色の初期化
 }
 
 function updateUI() {
@@ -402,24 +420,32 @@ function checkAnswer(answer) {
     const question = selectedQuestions[currentQuestionIndex];
     if (answer.toLowerCase() === question.english.toLowerCase()) {
         score += 10;
+        correctAnswers.push(question.english);
         currentQuestionIndex++;
         if (currentQuestionIndex < selectedQuestions.length) {
-            showQuestion();
-            startTimer();
+            document.body.style.backgroundColor = "red"; // 正解時に背景を赤くする
+            setTimeout(() => {
+                showQuestion();
+                startTimer();
+            }, 500); // 0.5秒後に次の問題を表示
         } else {
             showGameClearScreen();
         }
     } else {
         lives--;
-        if (lives <= 0) {
-            showGameOverScreen();
-        } else {
-            correctAnswerElement.textContent = `正解は: ${question.english}`;
-            correctAnswerElement.style.display = "block";
-            currentQuestionIndex++;
-            showQuestion();
-            startTimer();
-        }
+        wrongAnswers.push(question.english);
+        document.body.style.backgroundColor = "blue"; // 不正解時に背景を青くする
+        setTimeout(() => {
+            if (lives <= 0) {
+                showGameOverScreen();
+            } else {
+                correctAnswerElement.textContent = `正解は: ${question.english}`;
+                correctAnswerElement.style.display = "block";
+                currentQuestionIndex++;
+                showQuestion();
+                startTimer();
+            }
+        }, 500); // 0.5秒後に次の問題を表示またはゲームオーバー画面を表示
     }
     updateUI();
 }
@@ -434,10 +460,18 @@ function showGameOverScreen() {
     gameScreen.style.display = "none";
     gameOverScreen.style.display = "block";
     document.getElementById("final-score").textContent = `あなたのスコア: ${score}`;
+
+    // レビュー画面に間違えた単語を表示
+    reviewWrongAnswers.innerHTML = `<p>間違えた単語:</p>${wrongAnswers.map(word => `<p>${word}</p>`).join('')}`;
+    reviewCorrectAnswers.innerHTML = `<p>正解した単語:</p>${correctAnswers.map(word => `<p>${word}</p>`).join('')}`;
 }
 
 function showGameClearScreen() {
     gameScreen.style.display = "none";
     gameClearScreen.style.display = "block";
     document.getElementById("final-score-clear").textContent = `あなたのスコア: ${score}`;
+
+    // レビュー画面に正解した単語を表示
+    reviewWrongAnswersClear.innerHTML = `<p>間違えた単語:</p>${wrongAnswers.map(word => `<p>${word}</p>`).join('')}`;
+ reviewCorrectAnswersClear.innerHTML = `<p>正解した単語:</p>${correctAnswers.map(word => `<p>${word}</p>`).join('')}`;
 }
