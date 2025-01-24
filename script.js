@@ -223,5 +223,6 @@ function showGameClearScreen() {
     gameClearScreen.style.display = "block";
     document.getElementById("final-score-clear").textContent = `あなたのスコア: ${score}`;
 
-     // レビュー画面に正解した単語を表示
+    // レビュー画面に正解した単語を表示
     reviewWrongAnswersClear.innerHTML = `<p>間違えた単語:</p>${wrongAnswers.map(word => `<p>${word}</p>`).join('')}`;
+    reviewCorrectAnswers
