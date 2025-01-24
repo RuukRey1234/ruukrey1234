@@ -1,5 +1,5 @@
 let questions = [
-    { "japanese": "とにかく", "english": "anyway", "partOfSpeech": "副詞" },
+{ "japanese": "とにかく", "english": "anyway", "partOfSpeech": "副詞" },
      { "japanese": "耳鼻咽喉科(19文字）", "english": "otorhinolaryngology", "partOfSpeech": "副詞" },
     { "japanese": "美しい", "english": "beautiful", "partOfSpeech": "形容詞" },
     { "japanese": "走る", "english": "run", "partOfSpeech": "動詞" },
@@ -255,8 +255,8 @@ let questions = [
       { "japanese": "鉱石", "english": "ore", "partOfSpeech": "名詞" },
       { "japanese": "簡易キッチン", "english": "kitchenette", "partOfSpeech": "名詞" },
       { "japanese": "寄付する，貢献する", "english": "contribute", "partOfSpeech": "動詞" },
-];
 
+];
 
 let score = 0;
 let lives = 3;
@@ -473,5 +473,3 @@ function showGameClearScreen() {
 
     // レビュー画面に正解した単語を表示
     reviewWrongAnswersClear.innerHTML = `<p>間違えた単語:</p>${wrongAnswers.map(word => `<p>${word}</p>`).join('')}`;
- reviewCorrectAnswersClear.innerHTML = `<p>正解した単語:</p>${correctAnswers.map(word => `<p>${word}</p>`).join('')}`;
-}
