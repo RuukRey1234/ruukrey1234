@@ -10,11 +10,11 @@
 
 <div id="home-screen">
     <h1>英単語クイズゲーム</h1>
-    <button id="game-play-button">game play</button>
+    <button id="game-play-button">３✕モード</button>
 </div>
 
 <div id="game-screen" style="display: none;">
-    <h2>タイピングクイズ</h2>
+    <h2>３✕タイピングクイズ</h2>
     <button id="start-button">ゲームスタート</button>
     <p id="question-placeholder">ここに問題が表示されます</p>
     <p id="word"></p>
@@ -31,12 +31,16 @@
 <div id="game-over-screen" style="display: none;">
     <h2>ゲームオーバー</h2>
     <p id="final-score"></p>
+    <div id="review-wrong-answers" style="color: blue;"></div>
+    <div id="review-correct-answers" style="color: red;"></div>
     <button id="return-home-button">ホームに戻る</button>
 </div>
 
 <div id="game-clear-screen" style="display: none;">
     <h2>ゲームクリア</h2>
     <p id="final-score-clear"></p>
+    <div id="review-wrong-answers-clear" style="color: blue;"></div>
+    <div id="review-correct-answers-clear" style="color: red;"></div>
     <button id="return-home-button-clear">ホームに戻る</button>
 </div>
 
