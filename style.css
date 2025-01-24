@@ -27,6 +27,12 @@ h2 {
     color: #333;
 }
 
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
 button {
     padding: 10px 20px;
     font-size: 1.2rem;
@@ -78,4 +84,53 @@ input:focus {
 
 #correct-answer {
     color: red;
+}
+
+#review-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+#review-container ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#review-container ul li {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* スマホ・タブレット用のレスポンシブデザイン */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+}
+
+#game-screen.correct {
+    background-color: #d4edda; /* 正解: 緑背景 */
+    transition: background-color 0.3s ease;
+}
+
+#game-screen.incorrect {
+    background-color: #f8d7da; /* 不正解: 赤背景 */
+    transition: background-color 0.3s ease;
 }
