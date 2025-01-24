@@ -223,5 +223,5 @@ function showGameClearScreen() {
 
     // レビュー画面に正解した単語を表示
     reviewWrongAnswersClear.innerHTML = `<p>間違えた単語:</p>${wrongAnswers.map(word => `<p>${word}</p>`).join('')}`;
-    reviewCorrectAnswersClear.innerHTML = `<p>正解した単語:</p>${correctAnswers.map(word => `<p>${word}</p>`).join('')}`;
+ reviewCorrectAnswersClear.innerHTML = `<p>正解した単語:</p>${correctAnswers.map(word => `<p>${word}</p>`).join('')}`;
 }
