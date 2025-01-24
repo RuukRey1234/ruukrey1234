@@ -1,10 +1,5 @@
 let questions = [
-{ "japanese": "とにかく", "english": "anyway", "partOfSpeech": "副詞" },
-     { "japanese": "耳鼻咽喉科(19文字）", "english": "otorhinolaryngology", "partOfSpeech": "副詞" },
-    { "japanese": "美しい", "english": "beautiful", "partOfSpeech": "形容詞" },
-    { "japanese": "走る", "english": "run", "partOfSpeech": "動詞" },
-    { "japanese": "犬", "english": "dog", "partOfSpeech": "名詞" },
-    { "japanese": "信頼，信仰(〇〇〇th)", "english": "faith", "partOfSpeech": "名詞" },
+     { "japanese": "耳鼻咽喉科(19文字）", "english": "otorhinolaryngology", "partOfSpeech": "名詞" },
     { "japanese": "忠実に", "english": "faithfully", "partOfSpeech": "副詞" },
     { "japanese": "主として", "english": "primarily", "partOfSpeech": "副詞" },
     { "japanese": "ごみ(R始まり）", "english": "rubbish", "partOfSpeech": "名詞" },
