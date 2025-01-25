@@ -1,70 +1,78 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #282c34;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    text-align: center;
+    margin: 0;
 }
-h1 {
-    font-size: 2.5rem;
-    color: #4CAF50;
-    margin-bottom: 20px;
-}
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #333;
-}
-button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-}
-button:hover {
-    background-color: #45a049;
-}
-input {
-    padding: 10px;
-    font-size: 1.2rem;
-    margin: 10px 0;
-    width: 80%;
-    text-align: center;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-}
-input:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
-#game-screen, #game-over-screen, #game-clear-screen {
+
+#home-screen, #game-screen, #game-over-screen, #game-clear-screen {
     width: 90%;
     max-width: 600px;
-    background-color: white;
-    border-radius: 10px;
+    text-align: center;
+    background: #1e2027;
+    border-radius: 15px;
     padding: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
-#score, #lives, #timer {
+
+button {
+    background-color: #61dafb;
+    border: none;
+    padding: 15px 30px;
+    margin-top: 15px;
+    color: black;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #21a1f1;
+}
+
+input {
+    width: 80%;
+    padding: 15px;
     font-size: 1.2rem;
-    margin-top: 10px;
-    color: #555;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid #61dafb;
+    border-radius: 8px;
+    background: #1e2027;
+    color: white;
+    text-align: center;
 }
-#hint {
-    color: blue;
+
+.status-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
-#correct-answer {
-    color: red;
+
+#hard-mode-input {
+    width: 80%;
+    padding: 15px;
+    font-size: 1.2rem;
+    margin: 20px auto;
+    display: block;
+    border: 2px solid #61dafb;
+    border-radius: 8px;
+    background: #1e2027;
+    color: rgb(255, 255, 255);
+    text-align: center;
 }
+
+p {
+    font-size: 1.2rem;
+}
+
+#game-over-screen p, #game-clear-screen p {
+    font-size: 1rem;
+    color: #ff6347;  /* ゲームオーバー、クリア時のリセットメッセージ */
+}
+
