@@ -7,34 +7,53 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- ホーム画面 -->
 <div id="home-screen">
-    <h1>英単語クイズゲーム</h1>
-    <button id="game-play-button">game play</button>
+    <h1>英単語タイピングクイズゲーム</h1>
+    <p>モードを選んでください:</p>
+    <button id="easy-mode-button">3×クイズモード</button>
+    <button id="hard-mode-button">鬼畜モード</button>
 </div>
+
+<!-- ゲーム画面 -->
 <div id="game-screen" style="display: none;">
-    <h2>タイピングクイズ</h2>
-    <button id="start-button">ゲームスタート</button>
+    <h2 id="game-title">タイピングクイズ</h2>
     <p id="question-placeholder">ここに問題が表示されます</p>
-    <p id="word"></p>
-    <p id="part-of-speech"></p>
-    <button id="hint-button" style="display: none;">ヒント</button>
-    <p id="hint" style="display: none;">ヒント: </p>
-    <input type="text" id="input" disabled placeholder="答えを入力してください">
-    <p id="score">スコア: 0</p>
-    <p id="lives">ライフ: 3</p>
-    <p id="timer">残り時間: 90秒</p>
-    <p id="correct-answer" style="display: none;"></p>
+    <input type="text" id="input" placeholder="英訳を入力してください" style="display: none;">
+    <button id="start-button">ゲーム開始</button>
+    <div class="status-bar">
+        <p id="score">スコア: 0</p>
+        <p id="lives">ライフ: 3</p>
+        <p id="timer">残り時間: 30秒</p>
+    </div>
 </div>
+
+<!-- 鬼畜モード画面 -->
+<div id="hard-mode-screen" style="display: none;">
+    <h2>鬼畜モード</h2>
+    <p id="hard-mode-question-placeholder">ここに問題が表示されます</p>
+    <input type="text" id="hard-mode-input" placeholder="英訳を入力してください" />
+    <div class="status-bar">
+        <p id="hard-mode-score">スコア: 0</p>
+        <p id="hard-mode-lives">ライフ: 1</p>
+    </div>
+</div>
+
+<!-- ゲームオーバー画面 -->
 <div id="game-over-screen" style="display: none;">
     <h2>ゲームオーバー</h2>
     <p id="final-score"></p>
-    <button id="return-home-button">ホームに戻る</button>
+    <p>ゲームをリセットするにはF5を押してください</p>
 </div>
+
+<!-- ゲームクリア画面 -->
 <div id="game-clear-screen" style="display: none;">
     <h2>ゲームクリア</h2>
     <p id="final-score-clear"></p>
-    <button id="return-home-button-clear">ホームに戻る</button>
+    <p>ゲームをリセットするにはF5を押してください</p>
 </div>
+
 <script src="script.js"></script>
 </body>
 </html>
