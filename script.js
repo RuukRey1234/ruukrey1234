@@ -1,12 +1,9 @@
+// 3✕モードの単語リスト
 let questions = [
-    { "japanese": "とにかく", "english": "anyway", "partOfSpeech": "副詞" },
-    { "japanese": "美しい", "english": "beautiful", "partOfSpeech": "形容詞" },
-    { "japanese": "走る", "english": "run", "partOfSpeech": "動詞" },
-    { "japanese": "犬", "english": "dog", "partOfSpeech": "名詞" },
-    { "japanese": "信頼，信仰", "english": "faith", "partOfSpeech": "名詞" },
-    { "japanese": "忠実に", "english": "faithfully", "partOfSpeech": "副詞" },
-    { "japanese": "主として", "english": "primarily", "partOfSpeech": "副詞" },
-    { "japanese": "ごみ", "english": "rubbish", "partOfSpeech": "名詞" },
+    { "japanese": "ごみ(L始まり）", "english": "litter", "partOfSpeech": "名詞" },
+    { "japanese": "ごみ（G始まり）", "english": "garvage", "partOfSpeech": "名詞" },
+    { "japanese": "ごみ（R始まり）", "english": "rubbish", "partOfSpeech": "名詞" },
+    { "japanese": "ごみ（T始まり）", "english": "trash", "partOfSpeech": "名詞" },
     { "japanese": "を貼り付ける，を取り付ける", "english": "attach", "partOfSpeech": "動詞" },
     { "japanese": "子会社", "english": "subsidiary", "partOfSpeech": "名詞" },
     { "japanese": "洞察（力），知覚", "english": "perception", "partOfSpeech": "名詞" },
@@ -32,19 +29,15 @@ let questions = [
     { "japanese": "形/を形作る", "english": "shape", "partOfSpeech": "名詞/動詞" },
     { "japanese": "化学の/化学製品", "english": "chemical", "partOfSpeech": "形容詞/名詞" },
     { "japanese": "冒険的事業", "english": "venture", "partOfSpeech": "名詞" },
-    { "japanese": "疑問", "english": "query", "partOfSpeech": "名詞" },
     { "japanese": "食器棚", "english": "cupboard", "partOfSpeech": "名詞" },
     { "japanese": "引き出し", "english": "drawer", "partOfSpeech": "名詞" },
-    { "japanese": "該当する", "english": "applicable", "partOfSpeech": "形容詞" },
-    { "japanese": "特定する", "english": "locate", "partOfSpeech": "動詞" },
+    { "japanese": "特定する、置く", "english": "locate", "partOfSpeech": "動詞" },
     { "japanese": "容量", "english": "capability", "partOfSpeech": "名詞" },
-    { "japanese": "式", "english": "formula", "partOfSpeech": "名詞" },
-    { "japanese": "囲む、同封する", "english": "enclose", "partOfSpeech": "動詞" },
-    { "japanese": "機関", "english": "administration", "partOfSpeech": "名詞" },
-    { "japanese": "魅力/を魅了する", "english": "charm", "partOfSpeech": "名詞/動詞" },
+      { "japanese": "囲む、同封する", "english": "enclose", "partOfSpeech": "動詞" },
     { "japanese": "保守的な", "english": "conservative", "partOfSpeech": "形容詞" },
     { "japanese": "を稼ぐ", "english": "earn", "partOfSpeech": "動詞" },
     { "japanese": "田舎", "english": "countryside", "partOfSpeech": "名詞" },
+    { "japanese": "田舎のような", "english": "rural", "partOfSpeech": "名詞" },
     { "japanese": "取引", "english": "transaction", "partOfSpeech": "名詞" },
     { "japanese": "排他的な", "english": "exclusive", "partOfSpeech": "形容詞" },
     { "japanese": "製造元", "english": "maker", "partOfSpeech": "名詞" },
@@ -55,9 +48,8 @@ let questions = [
     { "japanese": "独立した，自立した", "english": "independent", "partOfSpeech": "形容詞" },
     { "japanese": "取得", "english": "acquisition", "partOfSpeech": "名詞" },
     { "japanese": "海の", "english": "marine", "partOfSpeech": "形容詞" },
-    { "japanese": "手数料", "english": "commission", "partOfSpeech": "名詞" },
     { "japanese": "持続可能な", "english": "sustainable", "partOfSpeech": "形容詞" },
-    { "japanese": "大きさ", "english": "bulk", "partOfSpeech": "名詞" },
+    { "japanese": "大きさ、大半", "english": "bulk", "partOfSpeech": "名詞" },
     { "japanese": "包括的な", "english": "comprehensive", "partOfSpeech": "形容詞" },
     { "japanese": "引き起こした", "english": "caused", "partOfSpeech": "動詞" },
       { "japanese": "を放送する", "english": "broadcast", "partOfSpeech": "動詞" },
@@ -91,13 +83,13 @@ let questions = [
       { "japanese": "を手に入れる", "english": "obtain", "partOfSpeech": "動詞" },
       { "japanese": "手順", "english": "procedure", "partOfSpeech": "名詞" },
       { "japanese": "気づいた", "english": "noticed", "partOfSpeech": "動詞" },
-      { "japanese": "大学", "english": "college", "partOfSpeech": "名詞" },
+      { "japanese": "大学（C始まり）", "english": "college", "partOfSpeech": "名詞" },
+      { "japanese": "大学（U始まり）", "english": "university", "partOfSpeech": "名詞" },
       { "japanese": "をより好む", "english": "prefer", "partOfSpeech": "動詞" },
       { "japanese": "社会の，社交の", "english": "social", "partOfSpeech": "形容詞" },
       { "japanese": "消費者", "english": "consumer", "partOfSpeech": "名詞" },
       { "japanese": "会計士", "english": "accountant", "partOfSpeech": "名詞" },
-      { "japanese": "現場で", "english": "on site", "partOfSpeech": "副詞" },
-      { "japanese": "導かれた", "english": "conducted", "partOfSpeech": "形容詞" },
+         { "japanese": "導かれた", "english": "conducted", "partOfSpeech": "形容詞" },
       { "japanese": "承認する", "english": "approve", "partOfSpeech": "動詞" },
       { "japanese": "を拡大する", "english": "expand", "partOfSpeech": "動詞" },
       { "japanese": "（大規模な）会議", "english": "convention", "partOfSpeech": "名詞" },
@@ -108,7 +100,7 @@ let questions = [
       { "japanese": "目立った", "english": "outstanding", "partOfSpeech": "形容詞" },
       { "japanese": "規則的に，定期的に", "english": "regularly", "partOfSpeech": "副詞" },
       { "japanese": "国家の，国民の", "english": "national", "partOfSpeech": "形容詞" },
-      { "japanese": "祝福", "english": "congratulation", "partOfSpeech": "名詞" },
+      { "japanese": "祝福", "english": "Blessing", "partOfSpeech": "名詞" },
       { "japanese": "置き換えた", "english": "replaced", "partOfSpeech": "動詞" },
       { "japanese": "有名な", "english": "renowned", "partOfSpeech": "形容詞" },
       { "japanese": "参加", "english": "participation", "partOfSpeech": "名詞" },
@@ -252,168 +244,241 @@ let questions = [
       { "japanese": "鉱石", "english": "ore", "partOfSpeech": "名詞" },
       { "japanese": "簡易キッチン", "english": "kitchenette", "partOfSpeech": "名詞" },
       { "japanese": "寄付する，貢献する", "english": "contribute", "partOfSpeech": "動詞" },
+      { "japanese": "生の", "english": "raw", "partOfSpeech": "名詞" },
+      { "japanese": "法律", "english": "law", "partOfSpeech": "名詞" },
+      { "japanese": "列", "english": "row", "partOfSpeech": "名詞" },
+      { "japanese": "低い", "english": "low", "partOfSpeech": "名詞" },
+
+
 ];
+
+
+let hardModeQuestions = [
+    { "japanese": "生の", "english": "raw" },
+    { "japanese": "法律", "english": "law" },
+    { "japanese": "列", "english": "row" },
+    { "japanese": "低い", "english": "low" },
+        { "japanese": "抽象的な、理論的な", "english": "Abstract", "partOfSpeech": "形容詞" },
+        { "japanese": "蓄積する、積み上げる", "english": "Accumulate", "partOfSpeech": "動詞" },
+        { "japanese": "知人、面識", "english": "Acquaintance", "partOfSpeech": "名詞" },
+        { "japanese": "十分な、広い", "english": "Ample", "partOfSpeech": "形容詞" },
+        { "japanese": "適切な、ふさわしい", "english": "Appropriate", "partOfSpeech": "形容詞" },
+        { "japanese": "任意の、恣意的な", "english": "Arbitrary", "partOfSpeech": "形容詞" },
+        { "japanese": "評価する、査定する", "english": "Assess", "partOfSpeech": "動詞" },
+        { "japanese": "防ぐ、回避する", "english": "Avert", "partOfSpeech": "動詞" },
+        { "japanese": "強制する、無理にさせる", "english": "Compel", "partOfSpeech": "動詞" },
+        { "japanese": "示す、意味する", "english": "Denote", "partOfSpeech": "動詞" },
+        { "japanese": "減少する、縮小する", "english": "Diminish", "partOfSpeech": "動詞" },
+        { "japanese": "強調する", "english": "Emphasise", "partOfSpeech": "動詞" },
+        { "japanese": "包み込む、含む", "english": "Encompass", "partOfSpeech": "動詞" },
+        { "japanese": "妨げる、抑制する", "english": "Inhibit", "partOfSpeech": "動詞" },
+        { "japanese": "例、実例", "english": "Instance", "partOfSpeech": "名詞" },
+        { "japanese": "正当化する、弁明する", "english": "Justify", "partOfSpeech": "動詞" },
+        { "japanese": "気が進まない、乗り気でない", "english": "Reluctant", "partOfSpeech": "形容詞" },
+        { "japanese": "抵抗する、反抗する", "english": "Resist", "partOfSpeech": "動詞" },
+        { "japanese": "我慢する、許容する", "english": "Tolerate", "partOfSpeech": "動詞" },
+            { "japanese": "階層", "english": "hierarchy", "partOfSpeech": "名詞" },
+            { "japanese": "文房具", "english": "stationery", "partOfSpeech": "名詞" },
+            { "japanese": "静止した状態", "english": "stationary", "partOfSpeech": "名詞" },
+            { "japanese": "耳鼻咽喉科", "english": "Otorhinolaryngology", "partOfSpeech": "名詞" },
+            { "japanese": "輪っかの形をしたサンゴ礁", "english": "atoll", "partOfSpeech": "名詞" },
+            { "japanese": "心臓の、心臓血管の", "english": "cardiovascular", "partOfSpeech": "形容詞" },
+            { "japanese": "長い単語恐怖症", "english": "hippopotomonstrosesquippedaliophobia", "partOfSpeech": "名詞" },
+            { "japanese": "乾杯する（３文字）", "english": "make a toast" },
+            { "japanese": "漆、漆器", "english": "japan" },
+            { "japanese": "書く", "english": "pen" },
+           
+
+
+       
+       
+    ];
+
+
+// 共通変数
+let isHardMode = false; // モードフラグ（通常モード:false、鬼畜モード:true）
 let score = 0;
 let lives = 3;
-let timeLeft = 90;
+let timeLeft = 30;
 let currentQuestionIndex = 0;
 let timer;
-let selectedQuestions = [];
-// HTML要素取得
+let selectedQuestions = []; // 現在のモードの問題リスト
+let reviewList = []; // レビュー用の正解/不正解記録
+
+// HTML要素の取得
 const homeScreen = document.getElementById("home-screen");
 const gameScreen = document.getElementById("game-screen");
 const gameOverScreen = document.getElementById("game-over-screen");
 const gameClearScreen = document.getElementById("game-clear-screen");
-const gamePlayButton = document.getElementById("game-play-button");
+const easyModeButton = document.getElementById("easy-mode-button");
+const hardModeButton = document.getElementById("hard-mode-button");
 const startButton = document.getElementById("start-button");
-const returnHomeButton = document.getElementById("return-home-button");
-const returnHomeButtonClear = document.getElementById("return-home-button-clear");
 const inputElement = document.getElementById("input");
-const wordElement = document.getElementById("word");
-const partOfSpeechElement = document.getElementById("part-of-speech");
-const hintButton = document.getElementById("hint-button");
-const hintElement = document.getElementById("hint");
 const scoreElement = document.getElementById("score");
 const livesElement = document.getElementById("lives");
 const timerElement = document.getElementById("timer");
 const questionPlaceholder = document.getElementById("question-placeholder");
-const correctAnswerElement = document.getElementById("correct-answer");
-// ホーム画面からゲーム画面へ
-gamePlayButton.addEventListener("click", () => {
+const finalScoreElement = document.getElementById("final-score");
+const finalScoreClearElement = document.getElementById("final-score-clear");
+const reviewListGameOver = document.createElement("div");
+const reviewListGameClear = document.createElement("div");
+const returnHomeButton = document.getElementById("return-home-button");
+const returnHomeButtonClear = document.getElementById("return-home-button-clear");
+
+// モード選択ボタン
+easyModeButton.addEventListener("click", () => {
+    isHardMode = false; // 通常モードを選択
+    switchToGameScreen();
+});
+
+hardModeButton.addEventListener("click", () => {
+    isHardMode = true; // 鬼畜モードを選択
+    switchToGameScreen();
+});
+
+// ゲーム画面に移行
+function switchToGameScreen() {
     homeScreen.style.display = "none";
     gameScreen.style.display = "block";
-});
-startButton.addEventListener("click", startGame);
-returnHomeButton.addEventListener("click", () => {
-    gameOverScreen.style.display = "none";
-    homeScreen.style.display = "block";
-    resetGame();
-});
-returnHomeButtonClear.addEventListener("click", () => {
-    gameClearScreen.style.display = "none";
-    homeScreen.style.display = "block";
-    resetGame();
-});
-function startGame() {
-    score = 0;
-    lives = 3;
-    timeLeft = 90;
-    currentQuestionIndex = 0;
-    selectedQuestions = getRandomQuestions();
-    updateUI();
-    showQuestion();
-    startTimer();
-    inputElement.disabled = false;
-    inputElement.focus();
+    resetGameState();
+}
+
+// ゲーム開始ボタン
+startButton.addEventListener("click", () => {
     startButton.style.display = "none";
-    questionPlaceholder.style.display = "none";
-    hintButton.style.display = "block";
-    hintElement.style.display = "none";
-    correctAnswerElement.style.display = "none";
+    inputElement.style.display = "block";
+    startGame();
+});
+
+// ゲーム開始
+function startGame() {
+    resetGameState();
+
+    // モードに応じた問題リストを選択
+    selectedQuestions = isHardMode ? [...hardModeQuestions] : [...questions];
+
+    selectRandomQuestions(); // 問題をランダムに選択
+    showNextQuestion();
+    startTimer();
 }
-function resetGame() {
-    clearTimer();
+
+// ゲーム状態のリセット
+function resetGameState() {
     score = 0;
-    lives = 3;
-    timeLeft = 90;
+    lives = isHardMode ? 1 : 3; // 鬼畜モードではライフが1
+    timeLeft = 30;
     currentQuestionIndex = 0;
-    inputElement.value = '';
-    inputElement.disabled = true;
-    startButton.style.display = "block";
-    questionPlaceholder.style.display = "block";
-    hintButton.style.display = "none";
-    hintElement.style.display = "none";
-    correctAnswerElement.style.display = "none";
-    updateUI();
-}
-function getRandomQuestions() {
-    const shuffled = [...questions].sort(() => Math.random() - 0.5);
-    return shuffled.slice(0, 5); // ランダムに5問選ぶ
-}
-function showQuestion() {
-    if (currentQuestionIndex >= selectedQuestions.length) {
-        showGameClearScreen();
-        return;
-    }
-    const question = selectedQuestions[currentQuestionIndex];
-    wordElement.textContent = question.japanese;
-    partOfSpeechElement.textContent = question.partOfSpeech;
-    inputElement.value = '';
-    hintElement.style.display = "none";
-}
-function updateUI() {
+    reviewList = []; // レビューリストをリセット
     scoreElement.textContent = `スコア: ${score}`;
     livesElement.textContent = `ライフ: ${lives}`;
     timerElement.textContent = `残り時間: ${timeLeft}秒`;
+    inputElement.value = "";
+    reviewListGameOver.innerHTML = "";
+    reviewListGameClear.innerHTML = "";
 }
+
+// ランダムに問題を選ぶ
+function selectRandomQuestions() {
+    const shuffled = selectedQuestions.sort(() => Math.random() - 0.5); // ランダムにシャッフル
+    selectedQuestions = shuffled.slice(0, 5); // 最初の5問を選択
+}
+
+// 次の問題を表示
+function showNextQuestion() {
+    if (currentQuestionIndex < selectedQuestions.length) {
+        const question = selectedQuestions[currentQuestionIndex];
+        questionPlaceholder.textContent = question.japanese;
+    } else {
+        clearInterval(timer);
+        switchToGameClearScreen();
+    }
+}
+
+// 入力時の判定
+inputElement.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        const userInput = inputElement.value.trim().toLowerCase();
+        const question = selectedQuestions[currentQuestionIndex];
+        const correctAnswer = question.english.toLowerCase();
+
+        if (userInput === correctAnswer) {
+            document.body.style.backgroundColor = "red"; // 正解
+            score += 10;
+            scoreElement.textContent = `スコア: ${score}`;
+            reviewList.push({ ...question, correct: true });
+        } else {
+            document.body.style.backgroundColor = "blue"; // 不正解
+            lives--;
+            livesElement.textContent = `ライフ: ${lives}`;
+            reviewList.push({ ...question, correct: false });
+        }
+
+        setTimeout(() => {
+            document.body.style.backgroundColor = "#f4f4f9"; // 背景リセット
+        }, 300);
+
+        inputElement.value = "";
+        currentQuestionIndex++;
+
+        if (lives <= 0) {
+            clearInterval(timer);
+            switchToGameOverScreen();
+        } else {
+            showNextQuestion();
+        }
+    }
+});
+
+// ゲームオーバー画面に移行
+function switchToGameOverScreen() {
+    gameScreen.style.display = "none";
+    gameOverScreen.style.display = "block";
+    finalScoreElement.textContent = `スコア: ${score}`;
+    generateReviewList(reviewListGameOver);
+    gameOverScreen.appendChild(reviewListGameOver);
+}
+
+// ゲームクリア画面に移行
+function switchToGameClearScreen() {
+    gameScreen.style.display = "none";
+    gameClearScreen.style.display = "block";
+    finalScoreClearElement.textContent = `スコア: ${score}`;
+    generateReviewList(reviewListGameClear);
+    gameClearScreen.appendChild(reviewListGameClear);
+}
+
+// レビューリストの生成
+function generateReviewList(container) {
+    container.innerHTML = "<h3>レビュー</h3>";
+    reviewList.forEach(item => {
+        const p = document.createElement("p");
+        p.textContent = `${item.japanese} - ${item.english}`;
+        p.style.color = item.correct ? "red" : "blue"; // 正解なら赤、不正解なら青
+        container.appendChild(p);
+    });
+}
+
+// ホームに戻るボタンの処理
+returnHomeButton.addEventListener("click", resetToHomeScreen);
+returnHomeButtonClear.addEventListener("click", resetToHomeScreen);
+
+function resetToHomeScreen() {
+    gameOverScreen.style.display = "none";
+    gameClearScreen.style.display = "none";
+    homeScreen.style.display = "block";
+    resetGameState();
+}
+
+// タイマーの開始
 function startTimer() {
-    clearTimer();
     timer = setInterval(() => {
         timeLeft--;
         timerElement.textContent = `残り時間: ${timeLeft}秒`;
+
         if (timeLeft <= 0) {
-            clearTimer();
-            handleTimeUp();
+            clearInterval(timer);
+            switchToGameOverScreen();
         }
     }, 1000);
 }
-function clearTimer() {
-    if (timer) clearInterval(timer);
-}
-function handleTimeUp() {
-    lives--;
-    if (lives <= 0) {
-        showGameOverScreen();
-    } else {
-        currentQuestionIndex++;
-        showQuestion();
-        startTimer();
-    }
-    updateUI();
-}
-inputElement.addEventListener("keydown", (event) => {
-    if (event.key === "Enter" && inputElement.value.trim() !== '') {
-        clearTimer();
-        checkAnswer(inputElement.value.trim());
-    }
-});
-function checkAnswer(answer) {
-    const question = selectedQuestions[currentQuestionIndex];
-    if (answer.toLowerCase() === question.english.toLowerCase()) {
-        score += 10;
-        currentQuestionIndex++;
-        if (currentQuestionIndex < selectedQuestions.length) {
-            showQuestion();
-            startTimer();
-        } else {
-            showGameClearScreen();
-        }
-    } else {
-        lives--;
-        if (lives <= 0) {
-            showGameOverScreen();
-        } else {
-            correctAnswerElement.textContent = `正解は: ${question.english}`;
-            correctAnswerElement.style.display = "block";
-            currentQuestionIndex++;
-            showQuestion();
-            startTimer();
-        }
-    }
-    updateUI();
-}
-hintButton.addEventListener("click", () => {
-    const question = selectedQuestions[currentQuestionIndex];
-    hintElement.textContent = `ヒント: ${question.english[0].toUpperCase()}`;
-    hintElement.style.display = "block";
-});
-function showGameOverScreen() {
-    gameScreen.style.display = "none";
-    gameOverScreen.style.display = "block";
-    document.getElementById("final-score").textContent = `あなたのスコア: ${score}`;
-}
-function showGameClearScreen() {
-    gameScreen.style.display = "none";
-    gameClearScreen.style.display = "block";
-    document.getElementById("final-score-clear").textContent = `あなたのスコア: ${score}`;
-}
+
