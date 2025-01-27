@@ -379,7 +379,7 @@ function resetGameState() {
 
 // ランダムに問題を選ぶ
 function selectRandomQuestions() {
-    const shuffled = selectedQuestions.sort(() => Math.random() - 0.5); // ランダムにシャッフル
+    const shuffled = selectedQuestions.sort(() => Math.random() - 0.10); // ランダムにシャッフル
     selectedQuestions = shuffled.slice(0, 10); // 最初の5問を選択
 }
 
