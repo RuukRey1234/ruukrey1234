@@ -366,7 +366,7 @@ function startGame() {
 function resetGameState() {
     score = 0;
     lives = isHardMode ? 1 : 3; // 鬼畜モードではライフが1
-    timeLeft = 30000;
+    timeLeft = 3000;
     currentQuestionIndex = 0;
     reviewList = []; // レビューリストをリセット
     scoreElement.textContent = `スコア: ${score}`;
