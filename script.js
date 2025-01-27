@@ -299,7 +299,7 @@ let hardModeQuestions = [
 let isHardMode = false; // モードフラグ（通常モード:false、鬼畜モード:true）
 let score = 0;
 let lives = 3;
-let timeLeft = 30;
+let timeLeft = 3000;
 let currentQuestionIndex = 0;
 let timer;
 let selectedQuestions = []; // 現在のモードの問題リスト
